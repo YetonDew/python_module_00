@@ -5,6 +5,3 @@ def ft_garden_summary():
     print("Plants: " + str(plants))
     print("Status: Growing well!"
           if plants > 25 else "Status: We need more effort! :(")
-
-
-ft_garden_summary()
