@@ -7,6 +7,7 @@ class Plant(BasePlant):
 	def grow(self, days: int):
 		self.height += days
 
+
 	def age_up(self, days: int):
 		self.age += days
 
@@ -14,10 +15,15 @@ class Plant(BasePlant):
 		self.blueprinter()
 
 def main():
+    days = int(input("Enter the amount of days you want to simulate: "))
     p = Plant("Rose", 25, 30)
-    p.grow(5)
-    p.age_up(5)
+    print("=== Day 1 ===")
     p.get_info()
+    print("=== Day "+ str(days) +"===")
+    p.grow(days)
+    p.age_up(days)
+    p.get_info()
+    print("Growth this week: +"+str(days) +"cm")
 
 
 if __name__ == "__main__":
